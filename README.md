@@ -1,2 +1,2 @@
-# Bog-API-Node.JS
+# Blog-API-Node.JS
 Bog API Node.JS
