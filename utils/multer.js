@@ -1,7 +1,9 @@
 
 const multer = require("multer");
-const sharp = require("sharp");
+// const sharp = require("sharp");
+//  "sharp": "^0.33.3",
 const { v4: uuidv4 } = require("uuid");
+const ApiError = require("../utils/error");
 const multerStorage = multer.memoryStorage();
 
 const multerFilter = function (req, file, cb) {
@@ -26,10 +28,10 @@ try{
     
     const filename = ` user-${uuidv4()}-${Date.now()}.jpeg`;
   
-    await sharp(req.file.buffer)
-      .resize(600, 600)
-      .toFormat("jpeg")
-      .jpeg({ quality: 95 })
+    // await sharp(req.file.buffer)
+    //   .resize(600, 600)
+    //   .toFormat("jpeg")
+    //   .jpeg({ quality: 95 })
       // .toFile(`uploads/users/${filename}`);
   
   
@@ -61,10 +63,10 @@ try{
     
     const filename = ` post-${uuidv4()}-${Date.now()}.jpeg`;
   
-    await sharp(req.file.buffer)
-      .resize(600, 600)
-      .toFormat("jpeg")
-      .jpeg({ quality: 95 })
+    // await sharp(req.file.buffer)
+    //   .resize(600, 600)
+    //   .toFormat("jpeg")
+    //   .jpeg({ quality: 95 })
       // .toFile(`uploads/posts/${filename}`);
   
   
