@@ -23,7 +23,8 @@ exp.use("/api/posts",postRouter);
 
 
 exp.use(Error);
+var  PORT = process.env.PORT || 8000;
 //Server port connection
-exp.listen(process.env.PORT, () => {
-    console.log(`server connection with port number: ${process.env.PORT}`);
+exp.listen(PORT, () => {
+    console.log(`server connection with port number: ${PORT}`);
   });
