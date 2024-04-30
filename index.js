@@ -24,6 +24,6 @@ exp.use("/api/posts",postRouter);
 
 exp.use(Error);
 //Server port connection
-exp.listen(process.env.Port, () => {
-    console.log(`server connection with port number: ${process.env.Port}`);
+exp.listen(process.env.PORT, () => {
+    console.log(`server connection with port number: ${process.env.PORT}`);
   });
