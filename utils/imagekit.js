@@ -93,7 +93,7 @@ const imagekitUploadSingleImagePost= async (req, res, next) => {
         console.log("Error uploading image to imagekit:", error.message);
         res.status(500).json({
             status: "failed",
-            message: "An error occurred during file upload. Please try again."
+            message: error.message
         });
     }
 };
