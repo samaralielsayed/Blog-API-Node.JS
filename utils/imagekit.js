@@ -1,12 +1,13 @@
 const ImageKit = require("imagekit")
 const imageKit = new ImageKit({
     publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
+    privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
     urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
-    authenticationEndpoint:'https://blog-api-node-js-1.onrender.com/api/posts'
+    authenticationEndpoint:'https://api.render.com/deploy/srv-coruqu7sc6pc73du94e0?key=0G0_lFo1vMc'
 
 
   })
-//   privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
+  
 
 
 
