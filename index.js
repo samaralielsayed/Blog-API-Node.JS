@@ -18,13 +18,19 @@ require("./db/dbConnection");
 //routes all methods from routing file
 const userRouter=require('./routes/users.route');
 const postRouter=require('./routes/posts.route');
+const { imageKit } = require("./utils/imagekit");
 exp.use("/api/users",userRouter);
 exp.use("/api/posts",postRouter);
 
-
+exp.use('/', function (req, res) {
+  var result = imageKit.getAuthenticationParameters();
+  console.log('result',result)
+  res.send(result);
+});
 exp.use(Error);
 var  PORT = process.env.PORT || 8000;
 //Server port connection
+
 exp.listen(PORT, () => {
     console.log(`server connection with port number: ${PORT}`);
   });
