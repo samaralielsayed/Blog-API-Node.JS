@@ -30,7 +30,7 @@ const imagekitUploadSingleImageUser= async (req, res, next) => {
             if (err) {
                 return res.status(500).json({
                     status: "failed",
-                    message: "error.message."
+                    message: err.message
                 });
             }
 
@@ -80,7 +80,7 @@ const imagekitUploadSingleImagePost= async (req, res, next) => {
             if (err) {
                 return res.status(500).json({
                     status: "failed",
-                    message: "error.message."
+                    message: err.message
                 });
             }
             req.fileId=response.fileId;
