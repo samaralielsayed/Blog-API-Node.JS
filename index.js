@@ -22,7 +22,7 @@ const { imageKit } = require("./utils/imagekit");
 exp.use("/api/users",userRouter);
 exp.use("/api/posts",postRouter);
 
-exp.use('/auth', function (req, res) {
+exp.get('/auth', function (req, res) {
   var result = imageKit.getAuthenticationParameters();
   console.log('result',result)
   res.send(result);
