@@ -3,8 +3,7 @@ const imageKit = new ImageKit({
     publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
     privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
     urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
-    
-   authenticationEndpoint:'https://blog-api-node-js-1.onrender.com/api/posts'
+    authenticationEndpoint:'https://blog-api-node-js-1.onrender.com/api/posts'
 
 
   })
@@ -62,7 +61,7 @@ const imagekitUploadSingleImageUser= async (req, res, next) => {
         console.log("Error uploading image to imagekit:", error.message);
         res.status(500).json({
             status: "failed",
-            message: "An error occurred during file upload. Please try again."
+            message: error.message
         });
     }
 };
