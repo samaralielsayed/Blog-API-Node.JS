@@ -3,7 +3,7 @@ const imageKit = new ImageKit({
     publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
     privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
     urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
-    authenticationEndpoint: "http://localhost:8000/api/auth"
+    authenticationEndpoint: "http://localhost:8000/auth"
 
 
   })
