@@ -3,7 +3,7 @@ const imageKit = new ImageKit({
     publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
     privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
     urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
-    authenticationEndpoint:'https://api.render.com/deploy/srv-coruqu7sc6pc73du94e0?key=0G0_lFo1vMc'
+    authenticationEndpoint: "http://localhost:8000/api/auth"
 
 
   })
