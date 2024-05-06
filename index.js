@@ -19,11 +19,11 @@ require("./db/dbConnection");
 const userRouter=require('./routes/users.route');
 const postRouter=require('./routes/posts.route');
 const { imageKit } = require("./utils/imagekit");
-exp.get('/auth', function (req, res) {
-  var result = imageKit.getAuthenticationParameters();
-  console.log('result',result)
-  res.send(result);
-});
+// exp.get('/auth', function (req, res) {
+//   var result = imageKit.getAuthenticationParameters();
+//   console.log('result',result)
+//   res.send(result);
+// });
 exp.use("/api/users",userRouter);
 exp.use("/api/posts",postRouter);
 
