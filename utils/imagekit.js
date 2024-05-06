@@ -23,7 +23,7 @@ const imagekitUploadSingleImageUser= async (req, res, next) => {
 
             return next();
         }
-
+        const result = imageKit.getAuthenticationParameters();
         imageKit.upload({
             file: req.file.buffer, // Use req.file.buffer instead of req.file directly
             fileName: req.body.image,
@@ -73,7 +73,7 @@ const imagekitUploadSingleImagePost= async (req, res, next) => {
         if (!req.file) {
             return next();
         }
-
+        const result = imageKit.getAuthenticationParameters();
        await imageKit.upload({
             file: req.file.buffer, // Use req.file.buffer instead of req.file directly
             fileName: req.body.image,
