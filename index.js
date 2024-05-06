@@ -7,12 +7,7 @@ const ImageKit = require("imagekit");
 //env
 require("dotenv").config();
 
-const imageKit = new ImageKit({
-  publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
-  privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
-  urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
-  authenticationEndpoint: `http://localhost:${process.env.PORT}/auth` // Your server's authentication endpoint
-});
+
 
 //Converting from json to Object
 exp.use(express.json());
@@ -26,6 +21,7 @@ require("./db/dbConnection");
 //routes all methods from routing file
 const userRouter=require('./routes/users.route');
 const postRouter=require('./routes/posts.route');
+const { imageKit } = require("./utils/imagekit");
 
 
 
